@@ -7,6 +7,30 @@
   pointer-events: none;
 }
 
+.shakespeare-default {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  animation: float ease-in-out 3s infinite;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,7 +38,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #dddddd;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
